@@ -30,7 +30,7 @@ public class MainClass {
                 }
                 else if(ch==3){
                     System.out.println("Enter Amount to Deposit :");
-                    double depositAmount=in.nextDouble();//5000
+                    double depositAmount=in.nextDouble();
                     op.depositAmount(depositAmount);
 
 

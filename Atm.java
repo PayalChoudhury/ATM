@@ -1,12 +1,12 @@
 package atm;
 
-public class ATM {
+public class Atm {
     private double balance;
     private double depositAmount;
     private double withdrawAmount;
 
     //default constructor
-    public ATM(){
+    public Atm(){
 
     }
 

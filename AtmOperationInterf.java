@@ -1,5 +1,6 @@
 package atm;
 
+
 public interface AtmOperationInterf {
     public void viewBalance();
     public void withdrawAmount(double withdrawAmount);

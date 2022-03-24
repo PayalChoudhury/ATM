@@ -4,21 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AtmOperationImpl implements AtmOperationInterf{
-    ATM atm=new ATM();
+    Atm am=new Atm();
     Map<Double,String> ministmt=new HashMap<>();
     @Override
     public void viewBalance() {
-        System.out.println("Available Balance is : "+atm.getBalance());
+        System.out.println("Available Balance is : "+am.getBalance());
 
     }
 
     @Override
     public void withdrawAmount(double withdrawAmount) {
         if(withdrawAmount%500==0) {
-            if (withdrawAmount <= atm.getBalance()) {
+            if (withdrawAmount <= am.getBalance()) {
                 ministmt.put(withdrawAmount, " Amount Withdrawn");
                 System.out.println("Collect the Cash " + withdrawAmount);
-                atm.setBalance(atm.getBalance() - withdrawAmount);
+                am.setBalance(am.getBalance() - withdrawAmount);
                 viewBalance();
             } else {
                 System.out.println("Insufficient Balance !!");
@@ -34,7 +34,7 @@ public class AtmOperationImpl implements AtmOperationInterf{
     public void depositAmount(double depositAmount) {
         ministmt.put(depositAmount," Amount Deposited");
         System.out.println(depositAmount+" Deposited Successfully !!");
-        atm.setBalance(atm.getBalance()+depositAmount);
+        am.setBalance(am.getBalance()+depositAmount);
         viewBalance();
 
     }
