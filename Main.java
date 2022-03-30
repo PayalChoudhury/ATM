@@ -2,7 +2,7 @@ package atm;
 
 import java.util.Scanner;
 
-public class MainClass {
+public class Main{
     public static void main(String[] args) {
         AtmOperationInterf op=new AtmOperationImpl();
         int atmnumber=12345;
